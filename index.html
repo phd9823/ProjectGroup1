@@ -448,19 +448,19 @@ body{background:var(--bg);display:flex;justify-content:center;align-items:flex-s
 
       <div class="sec-hdr">Places Near You <span class="see-all" onclick="goTo('s-map')">View map</span></div>
       <div class="places">
-        <div class="pcard" onclick="goTo('s-detail')">
+        <div class="pcard" onclick="openPlace('trimbakeshwar')">
           <div class="pcard-img" style="background:#FFF3EC">🛕</div>
           <div class="pcard-inf"><div class="pcard-name">Trimbakeshwar</div><div class="pcard-loc">📍 Nashik</div></div>
         </div>
-        <div class="pcard" onclick="goTo('s-detail')">
+        <div class="pcard" onclick="openPlace('saibaba')">
           <div class="pcard-img" style="background:#E8F5E9">🕌</div>
           <div class="pcard-inf"><div class="pcard-name">Sai Baba Mandir</div><div class="pcard-loc">📍 Shirdi</div></div>
         </div>
-        <div class="pcard" onclick="goTo('s-detail')">
+        <div class="pcard" onclick="openPlace('ajanta')">
           <div class="pcard-img" style="background:#E3F2FD">🏛️</div>
           <div class="pcard-inf"><div class="pcard-name">Ajanta Caves</div><div class="pcard-loc">📍 Aurangabad</div></div>
         </div>
-        <div class="pcard" onclick="goTo('s-detail')">
+        <div class="pcard" onclick="openPlace('holycross')">
           <div class="pcard-img" style="background:#F3E5F5">⛪</div>
           <div class="pcard-inf"><div class="pcard-name">Holy Cross Church</div><div class="pcard-loc">📍 Nashik</div></div>
         </div>
@@ -510,19 +510,19 @@ body{background:var(--bg);display:flex;justify-content:center;align-items:flex-s
       <rect x="145" y="110" width="70" height="30" rx="6" fill="#ECEFF1" opacity=".5"/>
       <text x="180" y="129" font-size="8" fill="#546E7A" text-anchor="middle" font-family="DM Sans,sans-serif">Nashik District</text>
     </svg>
-    <div class="pin" style="left:50%;top:58%" onclick="goTo('s-detail')">
+    <div class="pin" style="left:50%;top:58%" onclick="openPlace('trimbakeshwar')">
       <div class="pin-lbl">Nashik</div>
       <div class="pin-dot"><span>🛕</span></div>
     </div>
-    <div class="pin" style="left:28%;top:38%" onclick="goTo('s-detail')">
+    <div class="pin" style="left:28%;top:38%" onclick="openPlace('saibaba')">
       <div class="pin-lbl">Shirdi</div>
       <div class="pin-dot" style="background:var(--teal)"><span>🕌</span></div>
     </div>
-    <div class="pin" style="left:72%;top:68%" onclick="goTo('s-detail')">
+    <div class="pin" style="left:72%;top:68%" onclick="openPlace('trimbakeshwar')">
       <div class="pin-lbl">Pune</div>
       <div class="pin-dot" style="background:var(--green)"><span>🛕</span></div>
     </div>
-    <div class="pin" style="left:76%;top:24%" onclick="goTo('s-detail')">
+    <div class="pin" style="left:76%;top:24%" onclick="openPlace('ajanta')">
       <div class="pin-lbl">Aurangabad</div>
       <div class="pin-dot" style="background:#7B4EA6"><span>🏛️</span></div>
     </div>
@@ -542,27 +542,27 @@ body{background:var(--bg);display:flex;justify-content:center;align-items:flex-s
   </div>
   <div class="sbody">
     <div class="loc-list">
-      <div class="loc-item" onclick="goTo('s-detail')">
+      <div class="loc-item" onclick="openPlace('trimbakeshwar')">
         <div class="loc-em">🛕</div>
         <div><div class="loc-name">Trimbakeshwar Temple</div><div class="loc-type">Jyotirlinga • Nashik</div></div>
         <div class="loc-badge">AR Ready</div>
       </div>
-      <div class="loc-item" onclick="goTo('s-detail')">
+      <div class="loc-item" onclick="openPlace('saibaba')">
         <div class="loc-em">🕌</div>
         <div><div class="loc-name">Sai Baba Samadhi Mandir</div><div class="loc-type">Dargah • Shirdi</div></div>
         <div class="loc-badge">Audio</div>
       </div>
-      <div class="loc-item" onclick="goTo('s-detail')">
+      <div class="loc-item" onclick="openPlace('ajanta')">
         <div class="loc-em">🏛️</div>
         <div><div class="loc-name">Ajanta Caves</div><div class="loc-type">Buddhist Heritage • Aurangabad</div></div>
         <div class="loc-badge">AR Ready</div>
       </div>
-      <div class="loc-item" onclick="goTo('s-detail')">
+      <div class="loc-item" onclick="openPlace('holycross')">
         <div class="loc-em">⛪</div>
         <div><div class="loc-name">Holy Cross Church</div><div class="loc-type">Catholic • Nashik</div></div>
         <div class="loc-badge">Audio</div>
       </div>
-      <div class="loc-item" onclick="goTo('s-detail')">
+      <div class="loc-item" onclick="openPlace('gurudwara')">
         <div class="loc-em">🕍</div>
         <div><div class="loc-name">Gurudwara Sikh Sangat</div><div class="loc-type">Sikh • Nashik</div></div>
         <div class="loc-badge">Guide</div>
@@ -584,12 +584,12 @@ body{background:var(--bg);display:flex;justify-content:center;align-items:flex-s
   <div class="detail-hero">
     <button class="hero-back" onclick="goBack()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
     <button class="hero-bm" id="bm-btn" onclick="toggleBm()">🔖</button>
-    🛕
+    <div id="d-hero-icon" style="display:inline">🛕</div>
   </div>
   <div class="detail-body">
-    <h2>Trimbakeshwar Temple</h2>
-    <div class="detail-sub">📍 Nashik, Maharashtra</div>
-    <div class="tags">
+    <h2 id="d-title">Trimbakeshwar Temple</h2>
+    <div class="detail-sub" id="d-sub">📍 Nashik, Maharashtra</div>
+    <div class="tags" id="d-tags">
       <span class="tag tag-r">Hindu</span>
       <span class="tag tag-s">Maharashtra</span>
       <span class="tag tag-a">AR Available</span>
@@ -600,9 +600,9 @@ body{background:var(--bg);display:flex;justify-content:center;align-items:flex-s
       <button class="act-btn act-sec" onclick="showToast('Direction opened in Maps')">🧭 Get Directions</button>
     </div>
     <div class="d-sec-title">About this place</div>
-    <div class="d-text">One of the twelve Jyotirlingas, Trimbakeshwar is a sacred Shiva temple near Nashik where the holy Godavari river originates. The temple holds immense religious significance in Hindu tradition and attracts millions of pilgrims each year.</div>
+    <div class="d-text" id="d-desc">One of the twelve Jyotirlingas, Trimbakeshwar is a sacred Shiva temple near Nashik where the holy Godavari river originates. The temple holds immense religious significance in Hindu tradition and attracts millions of pilgrims each year.</div>
     <div class="d-sec-title">Rituals &amp; Practices</div>
-    <div class="ritual-list">
+    <div class="ritual-list" id="d-rits">
       <div class="ritual" onclick="goTo('s-audio')">
         <div class="r-ic">🪔</div>
         <div><div class="r-name">Abhishek Puja</div><div class="r-dur">~20 min • Morning</div></div>
@@ -944,6 +944,50 @@ var qAnswered=false;
 var isPlaying=false;
 var audioInterval=null;
 var audioPos=35;
+
+var placesData = {
+  'trimbakeshwar': {
+    emoji: '🛕', title: 'Trimbakeshwar Temple', loc: '📍 Nashik, Maharashtra',
+    tags: '<span class="tag tag-r">Hindu</span><span class="tag tag-s">Maharashtra</span><span class="tag tag-a">AR Available</span>',
+    desc: 'One of the twelve Jyotirlingas, Trimbakeshwar is a sacred Shiva temple near Nashik where the holy Godavari river originates. The temple holds immense religious significance in Hindu tradition and attracts millions of pilgrims each year.',
+    rituals: '<div class="ritual" onclick="goTo(\'s-audio\')"><div class="r-ic">🪔</div><div><div class="r-name">Abhishek Puja</div><div class="r-dur">~20 min • Morning</div></div><div class="r-play">▶</div></div><div class="ritual" onclick="goTo(\'s-audio\')"><div class="r-ic">🌸</div><div><div class="r-name">Rudrabhishek</div><div class="r-dur">~45 min • Special</div></div><div class="r-play">▶</div></div><div class="ritual" onclick="goTo(\'s-audio\')"><div class="r-ic">🔔</div><div><div class="r-name">Evening Aarti</div><div class="r-dur">~15 min • Sunset</div></div><div class="r-play">▶</div></div>'
+  },
+  'saibaba': {
+    emoji: '🕌', title: 'Sai Baba Samadhi Mandir', loc: '📍 Shirdi, Maharashtra',
+    tags: '<span class="tag tag-r">Syncretic</span><span class="tag tag-s">Maharashtra</span>',
+    desc: 'The Samadhi Mandir holds the mortal remains of Sai Baba, a revered spiritual master accepted by both Hindus and Muslims. His teachings focused on love, forgiveness, and helping others.',
+    rituals: '<div class="ritual" onclick="goTo(\'s-audio\')"><div class="r-ic">🪔</div><div><div class="r-name">Kakad Aarti</div><div class="r-dur">~45 min • Morning</div></div><div class="r-play">▶</div></div><div class="ritual" onclick="goTo(\'s-audio\')"><div class="r-ic">🌸</div><div><div class="r-name">Mangal Snan</div><div class="r-dur">~30 min • Special</div></div><div class="r-play">▶</div></div>'
+  },
+  'ajanta': {
+    emoji: '🏛️', title: 'Ajanta Caves', loc: '📍 Aurangabad, Maharashtra',
+    tags: '<span class="tag tag-r">Buddhist</span><span class="tag tag-s">Heritage</span><span class="tag tag-a">AR Available</span>',
+    desc: 'A UNESCO World Heritage site featuring ancient rock-cut caves with exquisite Buddhist paintings and sculptures from 200 BCE depicting the Jataka tales.',
+    rituals: '<div class="ritual" onclick="goTo(\'s-audio\')"><div class="r-ic">🧘</div><div><div class="r-name">Meditation Path</div><div class="r-dur">~60 min • Mindful</div></div><div class="r-play">▶</div></div>'
+  },
+  'holycross': {
+    emoji: '⛪', title: 'Holy Cross Church', loc: '📍 Nashik, Maharashtra',
+    tags: '<span class="tag tag-r">Christian</span><span class="tag tag-s">Maharashtra</span>',
+    desc: 'A beautiful historical Catholic church in Nashik, known for its serene environment, striking architecture, and stunning stained-glass windows.',
+    rituals: '<div class="ritual" onclick="goTo(\'s-audio\')"><div class="r-ic">🎶</div><div><div class="r-name">Sunday Choir</div><div class="r-dur">~30 min • Weekly</div></div><div class="r-play">▶</div></div>'
+  },
+  'gurudwara': {
+    emoji: '🕍', title: 'Gurudwara Sikh Sangat', loc: '📍 Nashik, Maharashtra',
+    tags: '<span class="tag tag-r">Sikh</span><span class="tag tag-s">Maharashtra</span>',
+    desc: 'A peaceful Gurudwara serving the Sikh community with daily kirtans and hosting a traditional Langar (community kitchen) for all visitors regardless of faith.',
+    rituals: '<div class="ritual" onclick="goTo(\'s-audio\')"><div class="r-ic">🥣</div><div><div class="r-name">Langar Seva</div><div class="r-dur">~2 hours • Service</div></div><div class="r-play">▶</div></div><div class="ritual" onclick="goTo(\'s-audio\')"><div class="r-ic">🪕</div><div><div class="r-name">Evening Kirtan</div><div class="r-dur">~45 min • Evening</div></div><div class="r-play">▶</div></div>'
+  }
+};
+
+function openPlace(id) {
+  var data = placesData[id] || placesData['trimbakeshwar'];
+  document.getElementById('d-hero-icon').textContent = data.emoji;
+  document.getElementById('d-title').textContent = data.title;
+  document.getElementById('d-sub').textContent = data.loc;
+  document.getElementById('d-tags').innerHTML = data.tags;
+  document.getElementById('d-desc').textContent = data.desc;
+  document.getElementById('d-rits').innerHTML = data.rituals;
+  goTo('s-detail');
+}
 
 var questions=[
   {q:"Which festival marks the end of the holy month of Ramadan?",opts:["Diwali","Eid al-Fitr","Holi","Navratri"],correct:1,expl:["Diwali is a Hindu festival of lights, celebrated in October or November.","Eid al-Fitr marks the end of Ramadan with prayer, feasting and giving thanks.","Holi is the Hindu spring festival of colours.","Navratri is a 9-night Hindu festival dedicated to Goddess Durga."]},
